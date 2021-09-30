@@ -25,7 +25,7 @@ const Intro: React.FC<IntroProps> = ({ activePricing, setActivePricing }) => {
   return (
     <Grid container direction="column" alignContent="center">
       <Grid item>
-        <Typography variant="h1" align="center">
+        <Typography component="h2" variant="h1" align="center">
           Pricing.
         </Typography>
       </Grid>

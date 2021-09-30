@@ -2,6 +2,7 @@ import { createTheme } from '@material-ui/core';
 import { Shadows } from '@material-ui/core/styles/shadows';
 
 const primaryText = '#0D0C43';
+const backgroundColor = '#fff';
 const elevation = Array(25).fill('none') as Shadows;
 elevation[1] =
   '0px 10px 32px rgba(5, 85, 95, 0.06), 0px 8px 24px rgba(5, 85, 95, 0.04)';
@@ -18,7 +19,7 @@ const theme = createTheme({
       main: '#f50057',
     },
     background: {
-      default: '#ffffff',
+      default: backgroundColor,
     },
     text: {
       secondary: '#00b2c8',
@@ -65,6 +66,9 @@ const theme = createTheme({
       fontSize: 21,
       fontWeight: 300,
     },
+    h6: {
+      fontSize: 14,
+    },
     fontSize: 18,
   },
   shadows: elevation,
@@ -79,6 +83,7 @@ const theme = createTheme({
       outlined: {
         fontSize: 16,
         borderColor: `${primaryText}33`,
+        backgroundColor,
       },
     },
     MuiAppBar: {
@@ -97,6 +102,10 @@ const theme = createTheme({
 
 theme.typography.h1[theme.breakpoints.down('xs')] = {
   fontSize: 32,
+};
+theme.typography.h4[theme.breakpoints.down('xs')] = {
+  fontSize: 21,
+  lineHeight: 1.5,
 };
 theme.typography.h5[theme.breakpoints.down('xs')] = {
   fontSize: 16,
