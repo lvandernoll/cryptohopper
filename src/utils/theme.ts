@@ -2,12 +2,16 @@ import { createTheme } from '@material-ui/core';
 import { Shadows } from '@material-ui/core/styles/shadows';
 
 const primaryText = '#0D0C43';
+const elevation = Array(25).fill('none') as Shadows;
+elevation[1] =
+  '0px 10px 32px rgba(5, 85, 95, 0.06), 0px 8px 24px rgba(5, 85, 95, 0.04)';
 
 const theme = createTheme({
   palette: {
     type: 'light',
     primary: {
       main: '#00b2c8',
+      light: '#f8f7fc',
       contrastText: '#ffffff',
     },
     secondary: {
@@ -59,10 +63,11 @@ const theme = createTheme({
     },
     h5: {
       fontSize: 21,
+      fontWeight: 300,
     },
     fontSize: 18,
   },
-  shadows: Array(25).fill('none') as Shadows,
+  shadows: elevation,
   overrides: {
     MuiButton: {
       root: {
@@ -89,5 +94,13 @@ const theme = createTheme({
     },
   },
 });
+
+theme.typography.h1[theme.breakpoints.down('xs')] = {
+  fontSize: 32,
+};
+theme.typography.h5[theme.breakpoints.down('xs')] = {
+  fontSize: 16,
+  lineHeight: 1.5,
+};
 
 export default theme;

@@ -12,16 +12,12 @@ const Header: React.FC = () => {
   };
 
   return (
-    <StyledAppBar>
+    <StyledAppBar elevation={0}>
       <StyledToolbar variant="dense">
         <Logo />
         <RightAlignedButtons>
-          <Button variant="text">
-            Log in
-          </Button>
-          <Button variant="outlined">
-            Signup
-          </Button>
+          <Button variant="text">Log in</Button>
+          <Button variant="outlined">Signup</Button>
         </RightAlignedButtons>
         <Menu
           id="hamburger-menu"

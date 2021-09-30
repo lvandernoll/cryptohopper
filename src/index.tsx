@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { CssBaseline, MuiThemeProvider } from '@material-ui/core';
 import { ThemeProvider } from 'styled-components';
-import { theme } from 'theme';
+import theme from 'utils/theme';
 import * as serviceWorker from './serviceWorker';
 import App from './App';
 
