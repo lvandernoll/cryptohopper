@@ -1,5 +1,5 @@
 # Cryptohopper
-Time spent: 4.5h
+Time spent: 6.5h
 ## Used Tech
 - React (no Next.JS)
 - [Material UI](https://v4.mui.com/)
