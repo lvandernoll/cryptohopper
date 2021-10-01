@@ -16,7 +16,9 @@ const Plans: React.FC<PlansProps> = ({ plans }) => (
       <BigWave />
     </Hidden>
     {plans.map((plan, i) => (
-      <Grid item xs={12} sm="auto">
+      // Using index as key because we know content won't change
+      // eslint-disable-next-line react/no-array-index-key
+      <Grid key={i} item xs={12} sm="auto">
         <Plan {...plan} waveIndex={waveIndices[Math.min(i, 2)]} />
       </Grid>
     ))}

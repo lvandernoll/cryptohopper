@@ -14,9 +14,9 @@ export const BigWave = styled(BigWaveSvg)`
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-`
+`;
 
-export const StyledPaper = styled(Paper)<{ waveUrl: string }>`
+export const StyledPaper = styled(Paper)`
   position: relative;
   overflow: hidden;
 `;
@@ -37,9 +37,13 @@ const Glow = `
   transform: translate(-50%, -50%);
 `;
 
-export const Glow1 = styled(Glow1Svg)`${Glow}`;
+export const Glow1 = styled(Glow1Svg)`
+  ${Glow}
+`;
 
-export const Glow2 = styled(Glow2Svg)`${Glow}`;
+export const Glow2 = styled(Glow2Svg)`
+  ${Glow}
+`;
 
 export const StyledChip = styled.div`
   border-radius: ${({ theme }) => theme.shape.borderRadius}px;

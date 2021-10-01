@@ -20,6 +20,8 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   rules: {
+    'import/no-dynamic-require': 'off',
+    'global-require': 'off',
     'no-plusplus': [ "error", { "allowForLoopAfterthoughts": true }],
     'consistent-return': 'off',
     'lines-between-class-members': 'off',

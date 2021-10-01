@@ -1,4 +1,5 @@
 import { Box } from '@material-ui/core';
+import Features from 'components/Features';
 import Intro from 'components/Intro';
 import Plans from 'components/Plans';
 import React, { useState } from 'react';
@@ -70,6 +71,9 @@ const Home: React.FC = () => {
             },
           ]}
         />
+      </Box>
+      <Box mx={[1, 10]} my={[2, 15]}>
+        <Features />
       </Box>
     </>
   );

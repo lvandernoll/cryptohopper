@@ -3,6 +3,7 @@ import { Shadows } from '@material-ui/core/styles/shadows';
 
 const primaryText = '#0D0C43';
 const backgroundColor = '#fff';
+const hintText = '#7a7998';
 const elevation = Array(25).fill('none') as Shadows;
 elevation[1] =
   '0px 10px 32px rgba(5, 85, 95, 0.06), 0px 8px 24px rgba(5, 85, 95, 0.04)';
@@ -24,7 +25,7 @@ const theme = createTheme({
     text: {
       secondary: '#00b2c8',
       primary: primaryText,
-      hint: '#7a7998',
+      hint: hintText,
     },
     success: {
       main: '#00b1c7',
@@ -34,7 +35,7 @@ const theme = createTheme({
       main: '#ef6464',
       light: '#f9e6e6',
     },
-    divider: primaryText,
+    divider: '#E5F4F5',
   },
   shape: {
     borderRadius: 18,
@@ -77,6 +78,9 @@ const theme = createTheme({
       root: {
         textTransform: 'none',
       },
+      textPrimary: {
+        backgroundColor,
+      },
       containedPrimary: {
         fontSize: 18,
       },
@@ -86,9 +90,36 @@ const theme = createTheme({
         backgroundColor,
       },
     },
+    MuiSelect: {
+      root: {
+        borderRadius: 8,
+      },
+      outlined: {
+        paddingTop: 13,
+        paddingBottom: 13,
+      },
+    },
+    MuiInputLabel: {
+      formControl: {
+        left: 20,
+        transform: 'translate(0, 16px) scale(1)',
+        color: hintText,
+        fontSize: 18,
+      },
+      shrink: {
+        fontSize: 22,
+        transform: 'translate(0, -8.5px) scale(0.75)',
+      },
+    },
     MuiAppBar: {
       root: {
         height: 100,
+      },
+    },
+    MuiTableCell: {
+      root: {
+        borderBottom: 'none',
+        fontSize: 21,
       },
     },
   },
@@ -96,6 +127,9 @@ const theme = createTheme({
     MuiAppBar: {
       color: 'inherit',
       position: 'relative',
+    },
+    MuiSelect: {
+      variant: 'outlined',
     },
   },
 });

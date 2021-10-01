@@ -13,7 +13,7 @@ const Intro: React.FC<IntroProps> = ({ activePricing, setActivePricing }) => {
     (pricing: Pricing) => (
       <StyledButton
         color={activePricing === pricing ? 'primary' : 'default'}
-        active={activePricing === pricing}
+        selected={activePricing === pricing}
         onClick={() => setActivePricing(pricing)}
       >
         {pricing}
@@ -29,7 +29,7 @@ const Intro: React.FC<IntroProps> = ({ activePricing, setActivePricing }) => {
           Pricing.
         </Typography>
       </Grid>
-      <Grid item justifyContent="center">
+      <Grid item>
         <Box mx={8} my={[2, 4]}>
           <Typography variant="h5" component="p" align="center">
             Become a member & join over 300.000 other Hoppers today!
